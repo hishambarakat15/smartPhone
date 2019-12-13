@@ -1,0 +1,50 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-8 offset-2">
+            <div class="card border shadow">
+                <div class="card-body">
+
+                    <form novalidate #loginForm="ngForm">
+                        <div class="row form-group">
+                            <label class="col-form-label col-12 col-md-2" for="username">
+                                email
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="text" name="username" id="username"
+                                       [(ngModel)]="userName" #username="ngModel" required  >
+                                <div *ngIf="username.touched &&username.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="username.errors.required"> This faild is required !</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-form-label col-12 col-md-2" for="password"> PassWord </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="password" name="password" id="password"
+                                       [(ngModel)]="passWord" #password="ngModel" required minlength="5" maxlength="20">
+                                <div *ngIf="password.touched && password.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="password.errors.required">This faild is required ! </p>
+                                    <p class="mt-0 text-danger" *ngIf="password.errors.minlength"> This Minmum number of character for this password is 5 !</p>
+                                    <p class="mt-0 text-danger" *ngIf="password.errors.maxlength">This password faild must be less than 20 characters !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-success" [disabled]="loginForm.invalid || isFormLoaded"
+                                    (click)="onClickFormHandler(loginForm)"> Login
+                                <i class="fa fa-spinner fa-spin" *ngIf="isFormLoaded"> </i>
+                            </button>
+                        </div>
+                        <p class="text-muted">Does not have an account ? <a routerLink="/register"> Reguster</a> <br>
+                            Return <a routerLink="">Home </a>
+                        </p>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.section-title{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 60px;
+}
+.section-title h3 {
+    color: #ef6644;
+    display: inline-block;
+    line-height: 19px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.section-title h3::before {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #ef6644;
+    border-radius: 50%;
+    bottom: -14px;
+    content: "";
+    height: 7px;
+    position: absolute;
+    right: 0;
+    width: 7px;
+    z-index: 2;
+}
+
+.section-title > h3::after {
+
+    background: #ef6644 none repeat scroll 0 0;
+    bottom: -11px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+}

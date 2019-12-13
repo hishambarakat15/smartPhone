@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12">
+           <div class="card">
+               <div class="card-body border-warning shadow">
+                   <div class="btn-group filterr">
+                    <button class="btn btn-outline-success" data-filter="all"> all </button>
+                    <button class="btn btn-outline-warning" data-filter="new"> New </button>
+                   </div>
+               </div>
+           </div>
+        </div>
+
+        <div class="col-12">
+            <div class="filtr-container ">
+                <div class="filtr-item col-12 col-sm-6 col-md-3 col-lg-4"
+          attr.data-category="{{product.isNew?'new':''}}"
+                     *ngFor="let product of products">
+                    <app-product [currentProduct]="product"></app-product>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

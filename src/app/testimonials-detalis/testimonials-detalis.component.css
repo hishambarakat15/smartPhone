@@ -1,0 +1,38 @@
+.vistor {
+    padding-top: 40px;
+}
+.vistor h4{
+    font-weight: bold;
+}
+.vistor .lead{
+    line-height: 2em;
+}
+.vistor .carousel-indicators{
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    padding-top: 150px;
+
+}
+.vistor .carousel-indicators li{
+    width: 80px;
+    height: 80px;
+    text-indent: 0;
+    opacity: .5;
+    border: 3px solid #FFF;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.vistor .carousel-indicators .active{
+    opacity: 1;
+
+
+    border: 3px solid #E41417;
+}
+.vistor .carousel-indicators li img{
+    max-width: 100%;
+
+
+}

@@ -1,0 +1,11 @@
+.page-title-text{
+    background:rgba(0,0,0,0)url("../../assets/images/page-title-bg.jpg") center center no-repeat;
+}
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+p,li{
+    line-height: 2.5em;
+
+}

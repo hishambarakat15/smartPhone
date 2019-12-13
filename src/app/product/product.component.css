@@ -1,0 +1,9 @@
+.card-img-top {
+    height: 180px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.bg-ef6644 {
+    background-color: #ef6644 !important;
+}

@@ -1,0 +1,22 @@
+<div class="card border-warning">
+    <img src="{{currentProduct.imagePath}}" alt="AVA" class="card-img-top">
+    <div class="card-body text-center">
+        <h4 class="card-title text-center display-7"> {{currentProduct.name}}</h4>
+        <span class="badge bg-ef6644 text-white p-2 display-7"> {{currentProduct.category}}</span>
+        <p class="text-center mt-1">
+            <span class="badge badge-secondary mr-1" *ngIf="currentProduct.isNew">New </span>
+            <span class="badge badge-success mr-1">{{currentProduct.price |currency }} </span>
+            <span class="badge badge-danger mr-1">{{currentProduct.discount |number:"0.0-2"}}% </span>
+            <span class="badge badge-warning mr-1">{{currentProduct.amountLeft |number:"0.0-0"}} </span>
+        </p>
+        <p class="text-center text-white">
+
+        </p>
+        <p class="text-center ">{{currentProduct.description}} </p>
+        <div class="text-center">
+            <button class="btn btn-warning btn-sm mr-1"
+                    routerLink="/product/{{currentProduct.id}}"> Show Details</button>
+            <button class="btn btn-success btn-sm" (click)="onAddToCart()"> Add To Cart</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,194 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="card border shadow">
+                <div class="card-body">
+                    <form novalidate #reisterForm="ngForm">
+
+                        <div class="row form-group">
+                            <label for="firstname" class="col-form-label col-12 col-md-2">
+                                First Name
+                            </label>
+                            <div class="col-12 col-md-4">
+                                <input class="form-control" type="text" name="firstname" id="firstname"
+                                       [(ngModel)]="firstName" #first="ngModel" required minlength="3" maxlength="20">
+                                <div *ngIf="first.touched && first.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="first.errors.required"> This Faild is Requird !</p>
+                                    <p class="mt-0 text-danger" *ngIf="first.errors.minlength"> This Faild must be more than 3 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="first.errors.maxlength"> This Faild must be less than 20 character !</p>
+
+                                </div>
+                            </div>
+                            <label for="lastname" class="col-form-label col-12 col-md-2">
+                                Last Name
+                            </label>
+                            <div class="col-12 col-md-4">
+                                <input class="form-control" type="text" name="lastname" id="lastname"
+                                       [(ngModel)]="lastName" #last="ngModel" required minlength="3" maxlength="20">
+                                <div *ngIf=" last.touched&& last.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="last.errors.required"> This Faild is Requird !</p>
+                                    <p class="mt-0 text-danger" *ngIf="last.errors.minlength"> This Faild must be more than 3 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="last.errors.maxlength"> This Faild must be less than 20 character !</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="username" class="col-form-label col-12 col-md-2">
+                                User Name
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="text" name="username" id="username"
+                                       [(ngModel)]="userName" #user="ngModel" required minlength="5" maxlength="15">
+                                <div *ngIf="user.touched && user.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="user.errors.required"> This Faild is Requird !</p>
+                                    <p class="mt-0 text-danger" *ngIf="user.errors.minlength"> This Faild must be more than 5 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="user.errors.maxlength"> This Faild must be less than 15 character !</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="email" class="col-form-label col-12 col-md-2">
+                                Email
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="email" name="email" id="email"
+                                       [(ngModel)]="emaill" #em="ngModel" required minlength="10" maxlength="30" email>
+                                <div *ngIf="em.touched && em.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="em.errors.required"> This Faild is Requird !</p>
+                                    <p class="mt-0 text-danger" *ngIf="em.errors.email"> This Faild must be Email @ !</p>
+                                    <p class="mt-0 text-danger" *ngIf="em.errors.minlength"> This Faild must be more than 10 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="em.errors.maxlength"> This Faild must be less than 30 character !</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="password" class="col-form-label col-12 col-md-2">
+                                Password
+                            </label>
+                            <div class="col-12 col-md-4">
+                                <input class="form-control" type="password" name="password" id="password"
+                                       [(ngModel)]="passWord" #pas="ngModel" required minlength="5" maxlength="15">
+                                <div *ngIf="pas.touched && pas.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="pas.errors.required"> This Faild is Requird !</p>
+                                    <p class="mt-0 text-danger" *ngIf="pas.errors.minlength"> This Faild must be more than 5 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="pas.errors.maxlength"> This Faild must be less than 15 character !</p>
+
+                                </div>
+                            </div>
+                            <!--<label for="repassword" class="col-form-label col-12 col-md-2">-->
+                            <!--Re Password-->
+                            <!--</label>-->
+                            <!--<div class="col-12 col-md-4">-->
+                            <!--<input class="form-control" type="password" name="repassword" id="repassword"-->
+                            <!--[(ngModel)]="rePassWord" #re="ngModel" required minlength="5" maxlength="15">-->
+                            <!--<div *ngIf="re.touched && re.invalid">-->
+                            <!--<p class="mt-0 text-danger" *ngIf="re.errors.required"> This Faild is Requird !</p>-->
+                            <!--<p class="mt-0 text-danger" *ngIf="re.errors.minlength"> This Faild must be more than 5 character !</p>-->
+                            <!--<p class="mt-0 text-danger" *ngIf="re.errors.maxlength"> This Faild must be less than 15 character !</p>-->
+
+
+                            <!--</div>-->
+                            <!--</div>-->
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="birth" class="col-form-label col-12 col-md-2">
+                                Birth Data
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="date" name="birth" id="birth"
+                                       [(ngModel)]="dateOfBirth" #dateofbirth="ngModel">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="gender" class="col-form-label col-12 col-md-2">
+                                Gender
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <select class="form-control" id="gender" name="gender" [(ngModel)]="gender" #gen="ngModel">
+                                    <option  *ngFor="let gender of genders" value="{{gender}}"> {{gender}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="address" class="col-form-label col-12 col-md-2">
+                                Address
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="text" name="address" id="address"
+                                       [(ngModel)]="adderSS" #address="ngModel" minlength="10" maxlength="30">
+                                <div *ngIf="address.touched && address.invalid">
+                                    <p class="mt-0 text-danger" *ngIf="address.errors.minlength"> This Faild must be more than 10 character !</p>
+                                    <p class="mt-0 text-danger" *ngIf="address.errors.maxlength"> This Faild must be less than 30 character !</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="country" class="col-form-label col-12 col-md-2">
+                                Country
+                            </label>
+                            <div class="col-12 col-md-4">
+                                <input class="form-control" type="text" name="country" id="country"
+                                       [(ngModel)]="countrY" #a="ngModel">
+                            </div>
+                            <label for="city" class="col-form-label col-12 col-md-2">
+                                City
+                            </label>
+                            <div class="col-12 col-md-4">
+                                <input class="form-control" type="text" name="city" id="city"
+                                       [(ngModel)]="citY" #b="ngModel">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="phone" class="col-form-label col-12 col-md-2">
+                                Phone Number
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input class="form-control" type="text" name="phone" id="phone"
+                                       [(ngModel)]="phonE" #number="ngModel">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="bio" class="col-form-label col-12 col-md-2">
+                                Bio
+                            </label>
+                            <div class="col-12 col-md-10">
+                <textarea class="form-control" type="text" name="bio" id="bio"
+                          [(ngModel)]="bioo" #msg="ngModel">
+
+                </textarea>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-success" [disabled]="reisterForm.invalid || isLoadedForm"
+                                    (click)="onClickRegisterHandler(reisterForm)"> Register
+
+                                <i class="fa fa-spin fa-spinner" *ngIf="isLoadedForm"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <p class="text-muted"> Have an account ?<a routerLink="/login">Login </a> <br>
+                                Return <a routerLink="">Home </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

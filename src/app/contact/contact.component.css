@@ -1,0 +1,10 @@
+.page-title-text{
+    background:rgba(0,0,0,0)url("../../assets/images/page-title-bg.jpg") center center no-repeat;
+}
+.container-fluid{
+    padding-right: 0px ;
+    padding-left: 0px;
+}
+form  input{
+    margin-bottom: 4px;
+}

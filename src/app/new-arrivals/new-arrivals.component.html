@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12 ">
+            <div class="section-title">
+                <h3 class="display-5 font-weight-bold"> NEW ARRIVALS </h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+            <div class="card border-primary shadow ">
+                <div class="card-body">
+                    <div class="owl-carousel owl-theme">
+                        <div *ngFor="let product of newProducts">
+                            <app-product [currentProduct]="product"></app-product>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+</div>

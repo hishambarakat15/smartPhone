@@ -1,0 +1,19 @@
+
+.carousel-item img {
+    height: 550px;
+}
+.carousel-caption img{
+    width: 320px;
+    height: 150px;
+}
+.left{
+    position: absolute;
+    right: 60%;
+    bottom: 45%;
+
+}
+.right{
+    position: absolute;
+    left: 60%;
+    bottom: 25%;
+}
